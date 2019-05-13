@@ -49,6 +49,7 @@ import static org.jboss.as.jaxrs.JaxrsSubsystemDefinition.RESTEASY_JSAPI;
 import static org.jboss.as.jaxrs.JaxrsSubsystemDefinition.RESTEASY_JSON_B_PROVIDER;
 import static org.jboss.as.jaxrs.JaxrsSubsystemDefinition.RESTEASY_JSON_P_PROVIDER;
 import static org.jboss.as.jaxrs.JaxrsSubsystemDefinition.RESTEASY_MULTIPART;
+import static org.jboss.as.jaxrs.JaxrsSubsystemDefinition.RESTEASY_VALIDATOR;
 import static org.jboss.as.jaxrs.JaxrsSubsystemDefinition.RESTEASY_VALIDATOR_11;
 import static org.jboss.as.jaxrs.JaxrsSubsystemDefinition.RESTEASY_YAML;
 import org.jboss.as.server.deployment.module.ResourceRoot;
@@ -81,6 +82,7 @@ public class JaxrsDependencyProcessor implements DeploymentUnitProcessor {
 
         addDependency(moduleSpecification, moduleLoader, RESTEASY_ATOM, true, false);
         addDependency(moduleSpecification, moduleLoader, RESTEASY_VALIDATOR_11, true, false);
+        addDependency(moduleSpecification, moduleLoader, RESTEASY_VALIDATOR, true, false);
         addDependency(moduleSpecification, moduleLoader, RESTEASY_JAXRS, true, deploymentBundlesClientBuilder);
         addDependency(moduleSpecification, moduleLoader, RESTEASY_JAXB, true, false);
         addDependency(moduleSpecification, moduleLoader, RESTEASY_JACKSON2, true, false);
